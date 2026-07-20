@@ -1,7 +1,6 @@
 # Student Management System
 
-A simple console-based application to manage students, 
-built with Java to practice Object-Oriented Programming concepts.
+A simple console-based application to manage students, built with Java to practice Object-Oriented Programming concepts.
 
 ## Features
 
@@ -14,6 +13,7 @@ built with Java to practice Object-Oriented Programming concepts.
 
 - Object-Oriented Programming (OOP)
 - Class responsibilities separation
+- Directory Architecture
 - Exception handling with `InputMismatchException`
 - Constructor dependency injection
 - Loops and control flow
@@ -25,8 +25,7 @@ built with Java to practice Object-Oriented Programming concepts.
 
 ## How to Run
 
-1. Clone the repository
-   git clone https://github.com/seu-usuario/student-management-system
+1. Clone the repository: https://github.com/NeylonEduardo/StudentSystem
 
 2. Open the project in IntelliJ IDEA
 
@@ -35,6 +34,7 @@ built with Java to practice Object-Oriented Programming concepts.
 ## How to Use
 
 Select an option from the menu:
+
 - [0] Add students to the list
 - [1] List all registered students
 - [2] Exit the program
