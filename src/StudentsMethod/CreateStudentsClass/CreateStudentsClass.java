@@ -14,8 +14,8 @@ import java.util.Scanner;
 public class CreateStudentsClass {
     private final Scanner scanner = new Scanner(System.in);
 
-    private int counter = 0;
     private final List<String> arrayNames = new ArrayList<>();
+    private int counter = 0;
 
     public void storeStudentsNames() {
         Student newStudent = new Student();

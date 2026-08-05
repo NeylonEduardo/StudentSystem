@@ -1,9 +1,7 @@
 package SelectOptionMethod;
 
-import GetAllMethods.GetAllMethods;
 import OptionsMethod.OptionOneMethod.OptionOne;
 import OptionsMethod.OptionsZeroMethod.OptionZero;
-import StudentsMethod.CreateStudentsClass.CreateStudentsClass;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -11,12 +9,16 @@ import java.util.Scanner;
 // -> Class to create the menu, and the logic to select the method <- //
 
 public class SelectOption {
-
     private final Scanner scanner = new Scanner(System.in);
-    private final GetAllMethods getAllMethods = new GetAllMethods();
-    private final CreateStudentsClass createStudentsClass = new CreateStudentsClass();
-    private final OptionZero optionZero = new OptionZero(this.getAllMethods, this.createStudentsClass);
-    private final OptionOne optionOne = new OptionOne(this.getAllMethods);
+
+    private final OptionZero optionZero;
+    private final OptionOne optionOne;
+
+    public SelectOption(OptionZero optionZero, OptionOne optionOne) {
+        this.optionZero = optionZero;
+        this.optionOne = optionOne;
+    }
+
 
     public void selectOption() {
         int valueOption = 0;
@@ -49,7 +51,7 @@ public class SelectOption {
                     break;
 
                 case 1:
-                    optionOne.execute(createStudentsClass);
+                    optionOne.execute();
 
                     System.out.println("\nPress 1 and Enter to go back: ");
                     int numberToGoBack = scanner.nextInt();
