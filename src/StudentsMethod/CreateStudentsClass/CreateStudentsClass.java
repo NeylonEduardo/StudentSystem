@@ -14,26 +14,31 @@ import java.util.Scanner;
 public class CreateStudentsClass {
     private final Scanner scanner = new Scanner(System.in);
 
-    private final List<String> arrayNames = new ArrayList<>();
-    private int counter = 0;
+    private final List<Student> arrayNamesAndAges = new ArrayList<>();
 
-    public void storeStudentsNames() {
-        Student newStudent = new Student();
+    public void storeAndCreateStudents() {
 
-        newStudent.setName(scanner.nextLine());
-        arrayNames.add(counter, newStudent.getName());
-        counter++;
-        System.out.println(newStudent.getName() + " Add to the list");
+        System.out.print("Enter a Student Name: ");
+        String studentName = scanner.nextLine();
+
+        System.out.print("Enter the student's age: ");
+        byte studentAge = scanner.nextByte();
+
+        arrayNamesAndAges.add(new Student(studentName, studentAge));
+
+        System.out.println("Student add to the List");
+
+        scanner.nextLine();
     }
 
     // -> Here print those names after accesses the list <- //
     public void listNames() {
 
-        for (String names : arrayNames) {
-            if (names == null) {
+        for (Student namesAndAges : arrayNamesAndAges) {
+            if (namesAndAges == null) {
                 break;
             }
-            System.out.println("Student Name: " + names);
+            System.out.printf("Student Name: %s | Student Age: %d \n", namesAndAges.getName(), namesAndAges.getAge());
         }
     }
 }

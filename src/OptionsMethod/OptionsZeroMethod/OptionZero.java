@@ -36,7 +36,6 @@ public class OptionZero {
             }
         }
         for (int i = 0; i < numberOfStudent; i++) {
-            System.out.print("Enter a Student Name: ");
             getAllMethods.createStudent(createStudentsClass);
         }
     }

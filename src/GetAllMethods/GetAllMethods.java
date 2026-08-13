@@ -7,7 +7,7 @@ import StudentsMethod.CreateStudentsClass.CreateStudentsClass;
 public class GetAllMethods {
 
     public void createStudent(CreateStudentsClass newStudent) {
-        newStudent.storeStudentsNames();
+        newStudent.storeAndCreateStudents();
     }
 
     public void listAllNames(CreateStudentsClass newStudent) {

@@ -4,6 +4,12 @@ package StudentsMethod.StudentClass;
 
 public class Student {
     private String name;
+    private byte age;
+
+    public Student(String name, byte age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -11,5 +17,13 @@ public class Student {
 
     public String getName() {
         return name;
+    }
+
+    public void setAge(byte age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
     }
 }
