@@ -5,6 +5,7 @@ A simple console-based application to manage students, built with Java to practi
 ## Features
 
 - Add one or multiple students to the list
+- Add specific names and ages for the students
 - List all registered students
 - Input validation with error handling
 - Interactive menu-driven interface
