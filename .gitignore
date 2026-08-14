@@ -5,11 +5,12 @@ out/
 !**/src/test/**/out/
 .kotlin
 *.iml
+StudentSystem.iml
 
 ### Eclipse ###
 .apt_generated
 .classpath
-.factorypath
+.factorypat
 .project
 .settings
 .springBeans
