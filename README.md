@@ -6,6 +6,7 @@ A simple console-based application to manage students, built with Java to practi
 
 - Add one or multiple students to the list
 - Add specific names and ages for the students
+- Remove specific student by de index
 - List all registered students
 - Input validation with error handling
 - Interactive menu-driven interface
@@ -15,6 +16,7 @@ A simple console-based application to manage students, built with Java to practi
 - Object-Oriented Programming (OOP)
 - Class responsibilities separation
 - Directory Architecture
+- Error Handling
 - Exception handling with `InputMismatchException`
 - Constructor dependency injection
 - Loops and control flow
@@ -38,7 +40,8 @@ Select an option from the menu:
 
 - [0] Add students to the list
 - [1] List all registered students
-- [2] Exit the program
+- [3] Remove student to the list
+- [3] Exit the program
 
 ## Author
 
