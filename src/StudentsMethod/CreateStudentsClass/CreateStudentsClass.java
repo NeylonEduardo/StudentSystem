@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class CreateStudentsClass {
     private final Scanner scanner = new Scanner(System.in);
 
-    private final List<Student> arrayNamesAndAges = new ArrayList<>();
+    public final List<Student> arrayNamesAndAges = new ArrayList<>();
 
     public void storeAndCreateStudents() {
 
@@ -33,12 +33,21 @@ public class CreateStudentsClass {
 
     // -> Here print those names after accesses the list <- //
     public void listNames() {
+        if (arrayNamesAndAges.isEmpty()) {
+            return;
+        }
 
+        int counter = 0;
+
+        System.out.println("Here is all Students:");
         for (Student namesAndAges : arrayNamesAndAges) {
+
             if (namesAndAges == null) {
                 break;
             }
-            System.out.printf("Student Name: %s | Student Age: %d \n", namesAndAges.getName(), namesAndAges.getAge());
+
+            System.out.printf("%d - Student Name: %s | Student Age: %d \n", counter, namesAndAges.getName(), namesAndAges.getAge());
+            ++counter;
         }
     }
 }

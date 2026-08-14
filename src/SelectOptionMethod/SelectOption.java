@@ -1,6 +1,7 @@
 package SelectOptionMethod;
 
 import OptionsMethod.OptionOneMethod.OptionOne;
+import OptionsMethod.OptionTwoMethod.RemoveStudent;
 import OptionsMethod.OptionsZeroMethod.OptionZero;
 
 import java.util.InputMismatchException;
@@ -13,21 +14,23 @@ public class SelectOption {
 
     private final OptionZero optionZero;
     private final OptionOne optionOne;
+    private final RemoveStudent removeStudent;
 
-    public SelectOption(OptionZero optionZero, OptionOne optionOne) {
+    public SelectOption(OptionZero optionZero, OptionOne optionOne, RemoveStudent removeStudent) {
         this.optionZero = optionZero;
         this.optionOne = optionOne;
+        this.removeStudent = removeStudent;
     }
 
 
     public void selectOption() {
         int valueOption = 0;
 
-        while (valueOption != 2) {
+        while (valueOption != 3) {
             System.out.println("""
                     --------------------------
                     -----Selection Option-----
-                    [0] Add a Student | [1] List All Students | [2] Exit
+                    [0] Add a Student | [1] List All Students | [2] Remove Student | [3] Exit
                     """);
 
             boolean validInput = false;
@@ -52,16 +55,13 @@ public class SelectOption {
 
                 case 1:
                     optionOne.execute();
-
-                    System.out.println("\nPress 1 and Enter to go back: ");
-                    int numberToGoBack = scanner.nextInt();
-                    scanner.nextLine();
-
-                    if (numberToGoBack == 1) {
-                        break;
-                    }
+                    break;
 
                 case 2:
+                    removeStudent.execute();
+                    break;
+
+                case 3:
                     System.out.println("Exiting...");
                     break;
 

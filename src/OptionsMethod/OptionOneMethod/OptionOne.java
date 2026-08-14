@@ -15,7 +15,6 @@ public class OptionOne {
     }
 
     public void execute() {
-        System.out.println("Here is all Students: ");
         getAllMethods.listAllNames(createStudentsClass);
     }
 }
